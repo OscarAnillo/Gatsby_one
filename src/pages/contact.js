@@ -6,15 +6,16 @@ export default function Contact(){
   return(
     <ContactContainer>
       <ContactWrapper>
-        <form action="" method="POST" autocomplete="off">
+        <form action="mailto:oscarani14@gmail.com" method="POST" autocomplete="off">
         <h1>Contact me</h1>
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" />
+        <input type="text" id="name" name="name" required/>
         <label for="email">Email</label>
-        <input type="text" id="email" name="email" />
+        <input type="text" id="email" name="email" required />
         <label for="message">Message</label>
+        <br />
         <textarea></textarea>
-        <input type="submit" value="Send"/>
+        <input type="submit" value="Send" required style={{display: 'inline-block', border:'none', width: '50%', margin: 'auto', background: 'coral', color: '#fff', padding: '1em 0', textTransform: 'uppercase'}}/>
         </form>
       </ContactWrapper>
     </ContactContainer>
@@ -43,13 +44,23 @@ const ContactWrapper = styled.div`
     padding: 1em;
   }
   label {
-    color: #eee;
+    color: #bbb;
   }
   input {
     width: 100%;
     border: none;
     border-bottom: 1px solid #111;
-    margin: 1em 0;
+    margin: .3em 0;
+    padding: 1em 0;
+    outline: none;
+
+  }
+  textarea {
+    width: 100%;
+    resize: none;
+    margin-bottom: 1em;
+    border: none;
+    border-bottom: 1px solid #111;
     outline: none;
   }
 `
