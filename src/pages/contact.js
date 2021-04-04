@@ -34,6 +34,7 @@ const ContactWrapper = styled.div`
   transform: translate(-50%, -50%);
   width: 90%;
 
+
   form {
     background: #fff;
     padding: 3em 1em;
@@ -58,9 +59,13 @@ const ContactWrapper = styled.div`
   textarea {
     width: 100%;
     resize: none;
-    margin-bottom: 1em;
+    margin: .3em 0;
     border: none;
     border-bottom: 1px solid #111;
     outline: none;
+  }
+
+  @media screen and (min-width: 768px){
+    max-width: 500px;
   }
 `
