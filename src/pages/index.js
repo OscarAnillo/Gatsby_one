@@ -3,6 +3,7 @@ import Layout from "../Components/layout"
 import Hero from '../Components/hero'
 import Places from "../Components/places"
 import About from './about';
+import Contact from './contact';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
           <Hero />
           <Places />
           <About />
+          <Contact />
         </Layout>
       </div>
   )
