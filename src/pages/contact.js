@@ -6,16 +6,16 @@ export default function Contact(){
   return(
     <ContactContainer>
       <ContactWrapper>
-        <form action="mailto:oscarani14@gmail.com" method="POST" autocomplete="off">
+        <form action="mailto:oscarani14@gmail.com" method="POST" autoComplete="off">
         <h1>Contact me</h1>
-        <label for="name">Name</label>
+        <label htmlFor="name">Name</label>
         <input type="text" id="name" name="name" required/>
-        <label for="email">Email</label>
+        <label htmlFor="email">Email</label>
         <input type="text" id="email" name="email" required />
-        <label for="message">Message</label>
+        <label htmlFor="message">Message</label>
         <br />
         <textarea></textarea>
-        <input type="submit" value="Send" required style={{display: 'inline-block', border:'none', width: '50%', margin: 'auto', background: 'coral', color: '#fff', padding: '1em 0', textTransform: 'uppercase'}}/>
+        <input type="submit" value="Send" required style={{display: 'inline-block', border:'none', width: '50%', margin: '.5em auto', background: 'coral', color: '#fff', padding: '1em 0', textTransform: 'uppercase'}}/>
         </form>
       </ContactWrapper>
     </ContactContainer>

@@ -1,25 +1,44 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { GiHamburgerMenu } from 'react-icons/Gi';
 
-export const Header = () => (
-  <NavContainer>
-    <NavWrapper>
-      <NavLogo>OscarAnillo</NavLogo>
-      <NavMenu><GiHamburgerMenu /></NavMenu>
-      <NavLinks>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about/">About</NavLink>
-        <NavLink to="/contact/">Contact</NavLink>
-      </NavLinks>
-    </NavWrapper>
-  </NavContainer>
-)
+export default function Header(){
+  const [open, setOpen] = useState(false);
+
+  const clickHandler = () => {
+    setOpen(!open)
+  }
+
+
+
+  return (
+    <NavContainer>
+      <NavWrapper>
+        <NavLogo>OscarAnillo</NavLogo>
+        <NavMenu><GiHamburgerMenu onClick={clickHandler}/>
+        </NavMenu>
+        <NavLinks>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about/">About</NavLink>
+          <NavLink to="/contact/">Contact</NavLink>
+        </NavLinks>
+      </NavWrapper>
+      {open && (<div style={{height: '95vh', width: '100%', background:'#111', position:'absolute'}}>
+        <NavLinkMobile to="/">Home</NavLinkMobile>
+        <NavLinkMobile to="/about/">About</NavLinkMobile>
+        <NavLinkMobile to="/contact/">Contact</NavLinkMobile>
+        </div>)}
+    </NavContainer>
+  )
+
+
+}
 
 const NavContainer = styled.nav`
   background: #111;
   z-index: 100;
+  position: relative;
 `
 const NavWrapper = styled.div`
   padding: 1em 0;
@@ -53,4 +72,13 @@ const NavLink = styled(Link)`
   text-decoration: none;
   color: #fff;
   }
+`
+const NavLinkMobile = styled(Link)`
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 4rem;
+  padding: 1.5em 0;
+  color: #fff;
 `
