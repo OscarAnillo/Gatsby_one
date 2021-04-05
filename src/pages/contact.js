@@ -15,7 +15,7 @@ export default function Contact(){
         <label htmlFor="message">Message</label>
         <br />
         <textarea></textarea>
-        <input type="submit" value="Send" required style={{display: 'inline-block', border:'none', width: '50%', margin: '.5em auto', background: 'coral', color: '#fff', padding: '1em 0', textTransform: 'uppercase'}}/>
+        <input type="submit" value="Send" required style={{display: 'inline-block', border:'none', borderRadius: 5, width: '50%', margin: '.5em auto', background: '#111', color: '#fff', padding: '1em 0', textTransform: 'uppercase', letterSpacing: 5, cursor: 'pointer'}}/>
         </form>
       </ContactWrapper>
     </ContactContainer>
@@ -23,7 +23,7 @@ export default function Contact(){
 }
 
 const ContactContainer = styled.div`
-  background: linear-gradient(to bottom, #111 50%, lightblue 50%);
+  background: linear-gradient(to bottom, #111 50%, coral 50%);
   height: 100vh;
   position: relative;
 `
