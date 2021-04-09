@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import Layout from '../Components/layout';
+
 import Greet from '../Components/aboutGreet';
 import Image from '../assets/images/me.jpg';
 
 export default function About(){
   return(
+   <Layout> 
     <AboutContainer>
       <AboutWrapper>
         <AboutText>
@@ -17,6 +20,7 @@ export default function About(){
         </AboutFlex>
       </AboutWrapper>
     </AboutContainer>
+    </Layout>
   )
 }
 
